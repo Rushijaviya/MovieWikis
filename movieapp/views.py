@@ -7,7 +7,16 @@ import requests
 
 
 def index(request):
-    return render(request,"home.html")
+    soon_url="https://imdb-api.com/en/API/ComingSoon/k_pftzqnp0"
+    soon=requests.get(soon_url).json()
+    release_url=("https://imdb-api.com/en/API/InTheaters/k_pftzqnp0")
+    release=requests.get(release_url).json()
+    top_url="https://imdb-api.com/en/API/BoxOffice/k_pftzqnp0"
+    top=requests.get(top_url).json()
+    lastest_url="https://imdb-api.com/en/API/InTheaters/k_pftzqnp0"
+    lastest=requests.get(lastest_url).json()
+    context={"soon":soon, "release": release, "top": top, "lastest": lastest}
+    return render(request,"home.html",context)
 
 def result(request):
     # query= "avenger"
