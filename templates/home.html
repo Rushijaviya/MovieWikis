@@ -675,7 +675,7 @@
                 <div class="col-lg-6 text-center text-lg-right">
                     <div class="portfolio-menu">
                         <ul>
-                            <li data-filter="*" class="active">Latest</li>
+                            <li data-filter=".lastest" class="active">Latest</li>
                             <li data-filter=".soon">Comming Soon</li>
                             <li data-filter=".top">Top Rated</li>
                             <li data-filter=".released">Recently Released</li>
@@ -687,16 +687,19 @@
             <div class="row">
                 <div class="col-lg-9">
                     <div class="row portfolio-item">
-                        <div class="col-md-4 col-sm-6 soon released">
+
+                        {% for i in lastest.items %}
+                        <div class="col-md-4 col-sm-6 lastest">
+                            
                             <div class="single-portfolio">
                                 <div class="single-portfolio-img">
-                                    <img src="https://wallpapercave.com/wp/wp9017438.jpg" alt="portfolio" />
-                                    <a href="https://www.youtube.com/watch?v=-FmWuCgJmxo" class="popup-youtube">
+                                    <img src="{{i.image}}" alt="portfolio" />
+                                    <a href="" class="popup-youtube">
                                         <i class="icofont icofont-ui-play"></i>
                                     </a>
                                 </div>
                                 <div class="portfolio-content">
-                                    <h2>Venom: Let There Be Carnage</h2>
+                                    <h2>{{i.fullTitle}}</h2>
                                     <div class="review">
                                         <div class="author-review">
                                             <i class="icofont icofont-star"></i>
@@ -709,17 +712,48 @@
                                     </div>
                                 </div>
                             </div>
+                            
                         </div>
-                        <div class="col-md-4 col-sm-6 top">
+                        {% endfor %}
+                        {% for i in soon.items %}
+                        <div class="col-md-4 col-sm-6 soon">
+                            
                             <div class="single-portfolio">
                                 <div class="single-portfolio-img">
-                                    <img src="https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F61116cea2313e8bae55a536a%2F-Dune-%2F0x0.jpg%3Ffit%3Dscale" alt="portfolio" />
-                                    <a href="https://www.youtube.com/watch?v=w0HgHet0sxg" class="popup-youtube">
+                                    <img src="{{i.image}}" alt="portfolio" />
+                                    <a href="" class="popup-youtube">
                                         <i class="icofont icofont-ui-play"></i>
                                     </a>
                                 </div>
                                 <div class="portfolio-content">
-                                    <h2>Dune</h2>
+                                    <h2>{{i.fullTitle}}</h2>
+                                    <div class="review">
+                                        <div class="author-review">
+                                            <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i>
+                                            <!-- <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i> -->
+                                        </div>
+                                        <h4>36k voters</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        {% endfor %}
+                        
+                        {% for i in top.items %}
+                        <div class="col-md-4 col-sm-6 top">
+                            <div class="single-portfolio">
+                                <div class="single-portfolio-img">
+                                    <img src="{{i.image}}" alt="portfolio" />
+                                    <a href="" class="popup-youtube">
+                                        <i class="icofont icofont-ui-play"></i>
+                                    </a>
+                                </div>
+                                <div class="portfolio-content">
+                                    <h2>{{i.fullTitle}}</h2>
                                     <div class="review">
                                         <div class="author-review">
                                             <i class="icofont icofont-star"></i>
@@ -733,62 +767,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 soon">
-                            <div class="single-portfolio">
-                                <div class="single-portfolio-img">
-                                    <img src="https://i.redd.it/4a8rd5658g161.jpg" alt="portfolio" />
-                                    <a href="https://www.youtube.com/watch?v=N_gD9-Oa0fg" class="popup-youtube">
-                                        <i class="icofont icofont-ui-play"></i>
-                                    </a>
-                                </div>
-                                <div class="portfolio-content">
-                                    <h2>No Time To Die</h2>
-                                    <div class="review">
-                                        <div class="author-review">
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <!-- <i class="icofont icofont-star"></i> -->
-                                        </div>
-                                        <h4>117k voters</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--  <div class="col-md-4 col-sm-6 top released">
-                            <div class="single-portfolio">
-                                <div class="single-portfolio-img">
-                                    <img src="../static/img/portfolio/portfolio4.png" alt="portfolio" />
-                                    <a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
-                                        <i class="icofont icofont-ui-play"></i>
-                                    </a>
-                                </div>
-                                <div class="portfolio-content">
-                                    <h2>Beast Beauty</h2>
-                                    <div class="review">
-                                        <div class="author-review">
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                        </div>
-                                        <h4>180k voters</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
+                        
+                        
+                         {% for i in release.items %}
                         <div class="col-md-4 col-sm-6 released">
                             <div class="single-portfolio">
                                 <div class="single-portfolio-img">
-                                    <img src="../static/img/portfolio/portfolio5.png" alt="portfolio" />
-                                    <a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+                                    <img src="{{i.image}}" alt="portfolio" />
+                                    <a href="" class="popup-youtube">
                                         <i class="icofont icofont-ui-play"></i>
                                     </a>
                                 </div>
                                 <div class="portfolio-content">
-                                    <h2>In The Fade</h2>
+                                    <h2>{{i.fullTitle}}</h2>
                                     <div class="review">
                                         <div class="author-review">
                                             <i class="icofont icofont-star"></i>
@@ -802,39 +794,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 soon top">
-                            <div class="single-portfolio">
-                                <div class="single-portfolio-img">
-                                    <img src="../static/img/portfolio/portfolio6.png" alt="portfolio" />
-                                    <a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
-                                        <i class="icofont icofont-ui-play"></i>
-                                    </a>
-                                </div>
-                                <div class="portfolio-content">
-                                    <h2>Last Hero</h2>
-                                    <div class="review">
-                                        <div class="author-review">
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                        </div>
-                                        <h4>180k voters</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
+                        {% endfor %}
+                        
                     </div>
                 </div>
-                <div class="col-lg-3 text-center text-lg-left">
+                <!-- <div class="col-lg-3 text-center text-lg-left">
                     <div class="portfolio-sidebar">
                         <img src="../static/img/sidebar/sidebar1.png" alt="sidebar" />
                         <img src="../static/img/sidebar/sidebar2.png" alt="sidebar" />
                         <img src="../static/img/sidebar/sidebar3.png" alt="sidebar" />
                         <img src="../static/img/sidebar/sidebar4.png" alt="sidebar" />
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
