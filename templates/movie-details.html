@@ -41,10 +41,10 @@
                 <div class="header-right">
                     <form action="#">
                         <select>
-								<option value="Movies">Movies</option>
-								<option value="Movies">Movies</option>
-								<option value="Movies">Movies</option>
-							</select>
+                            <option value="Movies">Movies</option>
+                            <option value="Movies">Movies</option>
+                            <option value="Movies">Movies</option>
+                        </select>
                         <input type="text" />
                         <button><i class="icofont icofont-search"></i></button>
                     </form>
@@ -65,7 +65,6 @@
                             <li><a class="active" href="#">Pages <i class="icofont icofont-simple-down"></i></a>
                                 <ul>
                                     <li><a href="{% url 'blog_details'%}">Blog Details</a></li>
-                                    <li><a class="active" href="{% url 'movie_details'%}">Movie Details</a></li>
                                 </ul>
                             </li>
                             <li><a class="theme-btn" href="#"><i class="icofont icofont-ticket"></i> Tickets</a></li>
@@ -313,7 +312,7 @@
                                 </li>
                                 <li>
                                     <p>TIME</p>
-                                    <span>2018.07.09   20:40</span>
+                                    <span>2018.07.09 20:40</span>
                                 </li>
                                 <li>
                                     <p>Movie name</p>
@@ -355,21 +354,24 @@
                 <div class="row flexbox-center">
                     <div class="col-lg-5 text-lg-left text-center">
                         <div class="transformers-content">
-                            <img src="../static/img/slide2.png" alt="about" />
-                            <a href="https://www.youtube.com/watch?v=Tv1Z4jvcgws" class="popup-youtube"></a>
+                            <img src="{{details.image}}" alt="about" />
+
                         </div>
                     </div>
+
                     <div class="col-lg-7">
                         <div class="transformers-content">
-                            <h2>The Transformers</h2>
-                            <p>3D | Animation | Action | Sci-Fi</p>
+
+                            <h2>{{details.fullTitle}}</h2>
+
+                            <!-- <p>3D | Animation | Action | Sci-Fi</p> -->
                             <ul>
                                 <li>
                                     <div class="transformers-left">
                                         Movie:
                                     </div>
                                     <div class="transformers-right">
-                                        <a href="#">Sci-Fic</a>
+                                        <a href="#">{{details.genres}}</a>
                                     </div>
                                 </li>
                                 <li>
@@ -377,7 +379,7 @@
                                         Writer:
                                     </div>
                                     <div class="transformers-right">
-                                        Stephen McFeely, Christopher Markus
+                                        {{details.writers}}
                                     </div>
                                 </li>
                                 <li>
@@ -385,7 +387,7 @@
                                         Director:
                                     </div>
                                     <div class="transformers-right">
-                                        Joe Johnston
+                                        {{details.directors}}
                                     </div>
                                 </li>
                                 <li>
@@ -393,7 +395,7 @@
                                         Time:
                                     </div>
                                     <div class="transformers-right">
-                                        190m
+                                        {{details.runtimeStr}}
                                     </div>
                                 </li>
                                 <li>
@@ -401,7 +403,7 @@
                                         Release:
                                     </div>
                                     <div class="transformers-right">
-                                        2018-07-22
+                                        {{details.releaseDate}}
                                     </div>
                                 </li>
                                 <li>
@@ -409,7 +411,24 @@
                                         Language:
                                     </div>
                                     <div class="transformers-right">
-                                        English, Russian
+                                        {{details.languages}}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="transformers-left">
+                                        imdb Rating:
+                                    </div>
+                                    <div class="transformers-right">
+                                        <a href="#">{{details.imDbRating}}</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="transformers-left">
+                                        Plot:
+                                    </div>
+                                    <div class="transformers-right">
+                                        <a href="#">{{details.plot}}
+                                        </a>
                                     </div>
                                 </li>
                                 <li>
@@ -417,22 +436,15 @@
                                         Cinema:
                                     </div>
                                     <div class="transformers-right">
-                                    <a href="#" class="theme-btn">Watch Trailer</a>
-                                        
+
+                                        <a href="{{details.trailer.link}}" class="theme-btn" target="blank">
+                                            Watch Trailer</a>
+
 
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="transformers-left">
-                                        Share:
-                                    </div>
-                                    <div class="transformers-right">
-                                        <a href="#"><i class="icofont icofont-social-facebook"></i></a>
-                                        <a href="#"><i class="icofont icofont-social-twitter"></i></a>
-                                        <a href="#"><i class="icofont icofont-social-google-plus"></i></a>
-                                        <a href="#"><i class="icofont icofont-youtube-play"></i></a>
-                                    </div>
-                                </li>
+
+
                             </ul>
                         </div>
                     </div>
@@ -450,9 +462,14 @@
                     <div class="details-content">
                         <div class="details-overview">
                             <h2>Overview</h2>
-                            <p>Humans are at war with the Transformers, and Optimus Prime is gone. The key to saving the future lies buried in the secrets of the past and the hidden history of Transformers on Earth. Now it's up to the unlikely alliance of
-                                inventor Cade Yeager, Bumblebee, a n English lord and an Oxford professor to save the world. Transformers: The Last Knight has a deeper mythos and bigger spectacle than its predecessors, yet still ends up being mostly hollow
-                                and cacophonous. The first "Transformers" movie that could actually be characterized as badass. Which isn't a bad thing. It may, in fact, be better.</p>
+                            <p>Humans are at war with the Transformers, and Optimus Prime is gone. The key to saving the
+                                future lies buried in the secrets of the past and the hidden history of Transformers on
+                                Earth. Now it's up to the unlikely alliance of
+                                inventor Cade Yeager, Bumblebee, a n English lord and an Oxford professor to save the
+                                world. Transformers: The Last Knight has a deeper mythos and bigger spectacle than its
+                                predecessors, yet still ends up being mostly hollow
+                                and cacophonous. The first "Transformers" movie that could actually be characterized as
+                                badass. Which isn't a bad thing. It may, in fact, be better.</p>
                         </div>
                         <div class="details-reply">
                             <h2>Leave a Reply</h2>
@@ -487,7 +504,8 @@
                         </div>
                         <div class="details-comment">
                             <a class="theme-btn theme-btn2" href="#">Post Comment</a>
-                            <p>You may use these HTML tags and attributes: You may use these HTML tags and attributes: You may use these HTML tags and attributes: </p>
+                            <p>You may use these HTML tags and attributes: You may use these HTML tags and attributes:
+                                You may use these HTML tags and attributes: </p>
                         </div>
                         <div class="details-thumb">
                             <div class="details-thumb-prev">
@@ -578,8 +596,8 @@
                     <div class="col-lg-6 text-center text-lg-right">
                         <div class="copyright-content">
                             <a href="#" class="scrollToTop">
-									Back to top<i class="icofont icofont-arrow-up"></i>
-								</a>
+                                Back to top<i class="icofont icofont-arrow-up"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
