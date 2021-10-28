@@ -28,8 +28,13 @@ def login(request):
 def celebrities(request):
     return render(request, "celebrities.html")
 
-def movie_details(request):
-    return render(request, "movie-details.html")
+def moviedetails(request,pk):
+    print(pk)
+    url='https://imdb-api.com/en/API/Title/k_95qlekw4/pk/Trailer,Ratings,Wikipedia'
+    details=requests.get(url).json()
+    context={"details":details}
+    
+    return render(request, "movie-details.html",context)  
 
 def top_movies(request):
     return render(request, "top-movies.html")
