@@ -79,7 +79,7 @@
                         <ul id="primary-menu">
                             <li><a class="active" href="{% url 'index'%}">Home</a></li>
                             <li><a href="{% url 'movies' %}">Movies</a></li>
-                            <li><a href="{% url 'celebrities' %}">CelebritiesList</a></li>
+                            <li><a href="{% url 'celebrities' %}">Team</a></li>
                             <li><a href="{% url 'top_movies' %}">Top Movies</a></li>
                             <li><a href="{% url 'blog' %}">News</a></li>
                             <li><a href="#">Pages <i class="icofont icofont-simple-down"></i></a>
@@ -702,15 +702,15 @@
             <div class="row">
                 <div class="col-lg-9">
                     <div class="row portfolio-item">
-
+                        <!-- style="padding: 0.5em; margin-bottom: 0.5em;" -->
                         {% for i in query.results %}
-                        <div class="col-md-4 col-sm-6 lastest">
+                        <div class="col-md-4 col-sm-6 lastest" >
 
                             <div class="single-portfolio">
-                                <div class="single-portfolio-img">
+                                <div class="single-portfolio-img" >
 
                                     <a href="{% url 'moviedetails' i.id %}">
-                                        <img src="{{i.image}}" alt="portfolio" />
+                                        <img src="{{i.image}}"  alt="portfolio" />
                                     </a>
                                 </div>
                                 <div class="portfolio-content">
@@ -772,8 +772,6 @@
                                     <i class="icofont icofont-star"></i>
                                     <i class="icofont icofont-star"></i>
                                     <i class="icofont icofont-star"></i>
-                                    <!-- <i class="icofont icofont-star"></i> -->
-                                    <!-- <i class="icofont icofont-star"></i> -->
                                 </div>
                                 <h4>Trailer</h4>
                             </div>
@@ -783,16 +781,16 @@
                 <div class="col-md-3">
                     <div class="row">
                         <div class="col-md-12 col-sm-6">
-                            <div class="video-area">
-                                <img src="../static/img/slide_dune.png" alt="video" />
+                            <div class="video-area" style="height: 214px;">
+                                <img src="../static/img/dune.png" alt="video" />
                                 <a href="https://www.youtube.com/watch?v=w0HgHet0sxg" class="popup-youtube">
                                     <i class="icofont icofont-ui-play"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-12 col-sm-6">
-                            <div class="video-area">
-                                <img src="../static/img/slide_JB_NTTD.jpg" alt="video" />
+                            <div class="video-area" style="height: 214px;">
+                                <img src="../static/img/jb.jpg" alt="video" />
                                 <a href="https://www.youtube.com/watch?v=N_gD9-Oa0fg" class="popup-youtube">
                                     <i class="icofont icofont-ui-play"></i>
                                 </a>

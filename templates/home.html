@@ -79,8 +79,14 @@
                         <ul id="primary-menu">
                             <li><a class="active" href="{% url 'index'%}">Home</a></li>
                             <li><a href="{% url 'movies' %}">Movies</a></li>
-                            <li><a href="{% url 'celebrities' %}">CelebritiesList</a></li>
+                            <li><a href="{% url 'celebrities' %}">Team</a></li>
                             <li><a href="{% url 'top_movies' %}">Top Movies</a></li>
+                            <li><a href="{% url 'blog'%}">News</a></li>
+                            <li><a href="#">Pages <i class="icofont icofont-simple-down"></i></a>
+                                <ul>
+                                    <li><a href="{% url 'blog_details'%}">Blog Details</a></li>
+                                </ul>
+                            </li>
                             <li><a class="theme-btn" href="#"><i class="icofont icofont-ticket"></i> Tickets</a></li>
                         </ul>
                     </div>
@@ -847,18 +853,18 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="row">
+                    <div class="row" >
                         <div class="col-md-12 col-sm-6">
-                            <div class="video-area">
-                                <img src="../static/img/slide_dune.png" alt="video" />
+                            <div class="video-area" style="height: 214px;">
+                                <img src="../static/img/dune.png" alt="video" />
                                 <a href="https://www.youtube.com/watch?v=w0HgHet0sxg" class="popup-youtube">
                                     <i class="icofont icofont-ui-play"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-12 col-sm-6">
-                            <div class="video-area">
-                                <img src="../static/img/slide_JB_NTTD.jpg" alt="video" />
+                            <div class="video-area" style="height: 214px;">
+                                <img src="../static/img/jb.jpg" alt="video" />
                                 <a href="https://www.youtube.com/watch?v=N_gD9-Oa0fg" class="popup-youtube">
                                     <i class="icofont icofont-ui-play"></i>
                                 </a>
