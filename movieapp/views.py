@@ -22,6 +22,9 @@ def index(request):
 def movies(request):
     return render(request, "movies.html")
 
+def login(request):
+    return render(request, "login.html")
+
 def celebrities(request):
     return render(request, "celebrities.html")
 
