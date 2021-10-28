@@ -78,15 +78,11 @@ def register_user(request):
 
 
 def searchresult(request):
-    # query= "avenger"
-    # url= 'https://imdb-api.com/en/API/SearchMovie/k_pftzqnp0/'+ query
-    # print(url)
-    # movie_data=requests.get(url).json
-    # context={'movie_data': movie_data}
-    # if request.method == "POST":
-    #     Query=request.POST.get("Query")
-    #     query_url="https://imdb-api.com/en/API/SearchMovie/k_08ug9l32/"+Query
-    #     q=requests.get(query_url).json()
-    #     print(q)
-    #     context={"query":q}
-    return render(request,'result.html')    
+    
+    if request.method == "POST":
+        Query=request.POST.get("Query")
+        query_url="https://imdb-api.com/en/API/SearchMovie/k_08ug9l32/"+Query
+        query=requests.get(query_url).json()
+        print(query)
+        context={"query":query}
+    return render(request,'result.html',context)    
