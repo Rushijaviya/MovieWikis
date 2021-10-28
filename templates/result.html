@@ -7,19 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Moviepoint - Online Movie,Vedio and TV Show HTML Template</title>
     <!-- Favicon Icon -->
-    <link rel="icon" type="image/png" href="static/img/favcion.png" />
+    <link rel="icon" type="image/png" href="../static/img/favcion.png" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css" media="all" />
     <!-- Slick nav CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/slicknav.min.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../static/css/slicknav.min.css" media="all" />
     <!-- Iconfont CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/icofont.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../static/css/icofont.css" media="all" />
     <!-- Owl carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/owl.carousel.css">
     <!-- Popup CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/magnific-popup.css">
     <!-- Main style CSS -->
-    <link rel="stylesheet" type="text/css" href="static/css/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" media="all" />
     <!-- Responsive CSS -->
     <link rel="stylesheet" type="text/css" href="../static/css/responsive.css" media="all" />
     <!--[if lt IE 9]>
@@ -31,17 +31,17 @@
 
     <style>
         .news-bg-1 {
-            background: url('static/img/news/venom2.jpg') no-repeat center / cover;
+            background: url('../static/img/news/venom2.jpg') no-repeat center / cover;
             height: 350px;
         }
         
         .news-bg-2 {
-            background: url('static/img/news/dune.jpg') no-repeat center / cover;
+            background: url('../static/img/news/dune.jpg') no-repeat center / cover;
             height: 350px;
         }
         
         .news-bg-3 {
-            background: url('static/img/news/NTTD.jpg') no-repeat center / cover;
+            background: url('../static/img/news/NTTD.jpg') no-repeat center / cover;
             height: 350px;
         }
     </style>
@@ -363,7 +363,7 @@
                 <div class="row hero-area-slide">
                     <div class="col-lg-6 col-md-5">
                         <div class="hero-area-content">
-                            <img src="static/img/slide_venom.png" alt="about" />
+                            <img src="../static/img/slide_venom.png" alt="about" />
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-7">
@@ -430,7 +430,7 @@
                 <div class="row hero-area-slide">
                     <div class="col-lg-6 col-md-5">
                         <div class="hero-area-content">
-                            <img src="static/img/slide_dune.png" alt="about" />
+                            <img src="../static/img/slide_dune.png" alt="about" />
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-7">
@@ -488,7 +488,7 @@
                 <div class="row hero-area-slide">
                     <div class="col-lg-6 col-md-5">
                         <div class="hero-area-content">
-                            <img src="static/img/slide_JB_NTTD.jpg" alt="about" />
+                            <img src="../static/img/slide_JB_NTTD.jpg" alt="about" />
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-7">
@@ -670,18 +670,18 @@
             <div class="row flexbox-center">
                 <div class="col-lg-6 text-center text-lg-left">
                     <div class="section-title">
-                        <h1><i class="icofont icofont-movie"></i> Spotlight This Month</h1>
+                        <h1><i class="icofont icofont-movie"></i> Search Result</h1>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
-                    <div class="portfolio-menu">
+                    <!-- <div class="portfolio-menu">
                         <ul>
                             <li data-filter=".lastest" class="active">Latest</li>
                             <li data-filter=".soon">Comming Soon</li>
                             <li data-filter=".top">Top Rated</li>
                             <li data-filter=".released">Recently Released</li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <hr />
@@ -689,7 +689,7 @@
                 <div class="col-lg-9">
                     <div class="row portfolio-item">
 
-                        {% for i in lastest.items %}
+                        {% for i in query.results %}
                         <div class="col-md-4 col-sm-6 lastest">
                             
                             <div class="single-portfolio">
@@ -716,86 +716,7 @@
                             
                         </div>
                         {% endfor %}
-                        {% for i in soon.items %}
-                        <div class="col-md-4 col-sm-6 soon">
-                            
-                            <div class="single-portfolio">
-                                <div class="single-portfolio-img">
-                                    <img src="{{i.image}}" alt="portfolio" />
-                                    <a href="" class="popup-youtube">
-                                        <i class="icofont icofont-ui-play"></i>
-                                    </a>
-                                </div>
-                                <div class="portfolio-content">
-                                    <h2>{{i.fullTitle}}</h2>
-                                    <div class="review">
-                                        <div class="author-review">
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <!-- <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i> -->
-                                        </div>
-                                        <h4>36k voters</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        {% endfor %}
                         
-                        {% for i in top.items %}
-                        <div class="col-md-4 col-sm-6 top">
-                            <div class="single-portfolio">
-                                <div class="single-portfolio-img">
-                                    <img src="{{i.image}}" alt="portfolio" />
-                                    <a href="" class="popup-youtube">
-                                        <i class="icofont icofont-ui-play"></i>
-                                    </a>
-                                </div>
-                                <div class="portfolio-content">
-                                    <h2>{{i.fullTitle}}</h2>
-                                    <div class="review">
-                                        <div class="author-review">
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <!-- <i class="icofont icofont-star"></i> -->
-                                        </div>
-                                        <h4>110k voters</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                        
-                        
-                         {% for i in release.items %}
-                        <div class="col-md-4 col-sm-6 released">
-                            <div class="single-portfolio">
-                                <div class="single-portfolio-img">
-                                    <img src="{{i.image}}" alt="portfolio" />
-                                    <a href="" class="popup-youtube">
-                                        <i class="icofont icofont-ui-play"></i>
-                                    </a>
-                                </div>
-                                <div class="portfolio-content">
-                                    <h2>{{i.fullTitle}}</h2>
-                                    <div class="review">
-                                        <div class="author-review">
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                            <i class="icofont icofont-star"></i>
-                                        </div>
-                                        <h4>180k voters</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
                         
                     </div>
                 </div>
