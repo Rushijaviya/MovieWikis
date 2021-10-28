@@ -354,22 +354,24 @@
                 <div class="row flexbox-center">
                     <div class="col-lg-5 text-lg-left text-center">
                         <div class="transformers-content">
-                            <img src="../static/img/slide2.png" alt="about" />
-                            <a href="https://www.youtube.com/watch?v=Tv1Z4jvcgws" class="popup-youtube"></a>
+                            <img src="{{details.image}}" alt="about" />
+
                         </div>
                     </div>
 
                     <div class="col-lg-7">
                         <div class="transformers-content">
+
                             <h2>{{details.fullTitle}}</h2>
-                            <p>3D | Animation | Action | Sci-Fi</p>
+
+                            <!-- <p>3D | Animation | Action | Sci-Fi</p> -->
                             <ul>
                                 <li>
                                     <div class="transformers-left">
                                         Movie:
                                     </div>
                                     <div class="transformers-right">
-                                        <a href="#">Sci-Fic</a>
+                                        <a href="#">{{details.genres}}</a>
                                     </div>
                                 </li>
                                 <li>
@@ -377,7 +379,7 @@
                                         Writer:
                                     </div>
                                     <div class="transformers-right">
-                                        Stephen McFeely, Christopher Markus
+                                        {{details.writers}}
                                     </div>
                                 </li>
                                 <li>
@@ -385,7 +387,7 @@
                                         Director:
                                     </div>
                                     <div class="transformers-right">
-                                        Joe Johnston
+                                        {{details.directors}}
                                     </div>
                                 </li>
                                 <li>
@@ -393,7 +395,7 @@
                                         Time:
                                     </div>
                                     <div class="transformers-right">
-                                        190m
+                                        {{details.runtimeStr}}
                                     </div>
                                 </li>
                                 <li>
@@ -401,7 +403,7 @@
                                         Release:
                                     </div>
                                     <div class="transformers-right">
-                                        2018-07-22
+                                        {{details.releaseDate}}
                                     </div>
                                 </li>
                                 <li>
@@ -409,7 +411,24 @@
                                         Language:
                                     </div>
                                     <div class="transformers-right">
-                                        English, Russian
+                                        {{details.languages}}
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="transformers-left">
+                                        imdb Rating:
+                                    </div>
+                                    <div class="transformers-right">
+                                        <a href="#">{{details.imDbRating}}</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="transformers-left">
+                                        Plot:
+                                    </div>
+                                    <div class="transformers-right">
+                                        <a href="#">{{details.plot}}
+                                        </a>
                                     </div>
                                 </li>
                                 <li>
@@ -417,22 +436,15 @@
                                         Cinema:
                                     </div>
                                     <div class="transformers-right">
-                                        <a href="#" class="theme-btn">Watch Trailer</a>
+
+                                        <a href="{{details.trailer.link}}" class="theme-btn" target="blank">
+                                            Watch Trailer</a>
 
 
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="transformers-left">
-                                        Share:
-                                    </div>
-                                    <div class="transformers-right">
-                                        <a href="#"><i class="icofont icofont-social-facebook"></i></a>
-                                        <a href="#"><i class="icofont icofont-social-twitter"></i></a>
-                                        <a href="#"><i class="icofont icofont-social-google-plus"></i></a>
-                                        <a href="#"><i class="icofont icofont-youtube-play"></i></a>
-                                    </div>
-                                </li>
+
+
                             </ul>
                         </div>
                     </div>
