@@ -7,6 +7,7 @@ import requests
 
 
 def index(request):
+
     soon_url="https://imdb-api.com/en/API/ComingSoon/k_pftzqnp0"
     soon=requests.get(soon_url).json()
     release_url=("https://imdb-api.com/en/API/InTheaters/k_pftzqnp0")
@@ -17,13 +18,6 @@ def index(request):
     lastest=requests.get(lastest_url).json()
     context={"soon":soon, "release": release, "top": top, "lastest": lastest}
     return render(request,"home.html",context)
-
-def result(request):
-    # query= "avenger"
-    # url= 'https://imdb-api.com/en/API/SearchMovie/k_pftzqnp0/'+ query
-    # print(url)
-    return render(request,'result.html')
-
 
 def movies(request):
     return render(request, "movies.html")
@@ -84,9 +78,15 @@ def register_user(request):
 
 
 def searchresult(request):
-    query= "avenger"
-    url= 'https://imdb-api.com/en/API/SearchMovie/k_pftzqnp0/'+ query
-    print(url)
-    movie_data=requests.get(url).json
-    context={'movie_data': movie_data}
-    return render(request,'result.html',context)    
+    # query= "avenger"
+    # url= 'https://imdb-api.com/en/API/SearchMovie/k_pftzqnp0/'+ query
+    # print(url)
+    # movie_data=requests.get(url).json
+    # context={'movie_data': movie_data}
+    # if request.method == "POST":
+    #     Query=request.POST.get("Query")
+    #     query_url="https://imdb-api.com/en/API/SearchMovie/k_08ug9l32/"+Query
+    #     q=requests.get(query_url).json()
+    #     print(q)
+    #     context={"query":q}
+    return render(request,'result.html')    

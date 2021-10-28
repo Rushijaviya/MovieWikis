@@ -59,14 +59,15 @@
                     <a href="index-2.html"><img src="../static/img/logo.png" alt="logo" /></a>
                 </div>
                 <div class="header-right">
-                    <form action="#">
-                        <select>
+                    <form action="result/" method="POST">
+                         <select>
 								<option value="Movies">Movies</option>
-								<option value="Movies">Movies</option>
-								<option value="Movies">Movies</option>
-							</select>
-                        <input type="text" />
-                        <button><i class="icofont icofont-search"></i></button>
+								<!-- <option value="Movies">Movies</option>
+								<option value="Movies">Movies</option> -->
+							</select> 
+                            {% csrf_token %}
+                        <input type="text" name="Query"/>
+                        <button type="submit"><i class="icofont icofont-search"></i></button>
                     </form>
                     <ul>
                         <li><a href="#">Welcome Guest!</a></li>
