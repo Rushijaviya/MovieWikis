@@ -31,17 +31,17 @@
 
     <style>
         .news-bg-1 {
-            background: url('../static/img/news/venom2.jpg') no-repeat center / cover;
+            background: url('static/img/news/venom2.jpg') no-repeat center / cover;
             height: 350px;
         }
-
+        
         .news-bg-2 {
-            background: url('../static/img/news/dune.jpg') no-repeat center / cover;
+            background: url('static/img/news/dune.jpg') no-repeat center / cover;
             height: 350px;
         }
-
+        
         .news-bg-3 {
-            background: url('../static/img/news/NTTD.jpg') no-repeat center / cover;
+            background: url('static/img/news/NTTD.jpg') no-repeat center / cover;
             height: 350px;
         }
     </style>
@@ -61,10 +61,10 @@
                 <div class="header-right">
                     <form action="result/" method="POST">
                         <select>
-                            <option value="Movies">Movies</option>
-                            <!-- <option value="Movies">Movies</option>
+								<option value="Movies">Movies</option>
+								<!-- <option value="Movies">Movies</option>
 								<option value="Movies">Movies</option> -->
-                        </select> {% csrf_token %}
+							</select> {% csrf_token %}
                         <input type="text" name="Query" />
                         <button type="submit"><i class="icofont icofont-search"></i></button>
                     </form>
@@ -81,12 +81,6 @@
                             <li><a href="{% url 'movies' %}">Movies</a></li>
                             <li><a href="{% url 'celebrities' %}">CelebritiesList</a></li>
                             <li><a href="{% url 'top_movies' %}">Top Movies</a></li>
-                            <li><a href="{% url 'blog' %}">News</a></li>
-                            <li><a href="#">Pages <i class="icofont icofont-simple-down"></i></a>
-                                <ul>
-                                    <li><a href="{% url 'blog_details' %}">Blog Details</a></li>
-                                </ul>
-                            </li>
                             <li><a class="theme-btn" href="#"><i class="icofont icofont-ticket"></i> Tickets</a></li>
                         </ul>
                     </div>
@@ -332,7 +326,7 @@
                                 </li>
                                 <li>
                                     <p>TIME</p>
-                                    <span>2018.07.09 20:40</span>
+                                    <span>2018.07.09   20:40</span>
                                 </li>
                                 <li>
                                     <p>Movie name</p>
@@ -377,10 +371,7 @@
                                 </div>
                                 <h4>36k voters</h4>
                             </div>
-                            <p>Eddie Brock attempts to reignite his career by interviewing serial killer Cletus Kasady,
-                                who becomes the host of the symbiote Carnage and escapes prison after a failed
-                                execution.
-                            </p>
+                            <p>Eddie Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.</p>
                             <h3>Genre</h3>
                             <div class="slide-cast" style="margin-left: 10px;">
                                 <ul>
@@ -397,7 +388,7 @@
                                 <div class="single-slide-cast">
                                     <span>Action</span>
                                     <h3> Action</h3>
-                                     <img src="static/img/cast/TH.jpg" alt="about" /> 
+                                     <img src="../static/img/cast/TH.jpg" alt="about" /> 
                                 </div>
                                 <div class="single-slide-cast">
                                     <img src="../static/img/cast/cast2.html" alt="" />
@@ -423,8 +414,7 @@
                             </div>
                             <div class="slide-trailor">
 
-                                <a class="theme-btn theme-btn2" href="https://www.youtube.com/watch?v=-FmWuCgJmxo"><i
-                                        class="icofont icofont-play"></i> Watch Trailer</a>
+                                <a class="theme-btn theme-btn2" href="https://www.youtube.com/watch?v=-FmWuCgJmxo"><i class="icofont icofont-play"></i> Watch Trailer</a>
                             </div>
                         </div>
                     </div>
@@ -448,9 +438,7 @@
                                 </div>
                                 <h4>110k voters</h4>
                             </div>
-                            <p>Feature adaptation of Frank Herbert's science fiction novel, about the son of a noble
-                                family entrusted with the protection of the most valuable asset and most vital element
-                                in the galaxy.</p>
+                            <p>Feature adaptation of Frank Herbert's science fiction novel, about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.</p>
                             <h3>Genre:</h3>
                             <div class="slide-cast" style="margin-left: 10px;">
                                 <ul>
@@ -459,7 +447,7 @@
                                     <li>Adevnture Fiction</li>
                                 </ul>
                                 <!-- <div class="single-slide-cast">
-                                    <img src="static/img/cast/TH.jpg" alt="about" />
+                                    <img src="../static/img/cast/TH.jpg" alt="about" />
                                 </div>
                                 <div class="single-slide-cast">
                                     <img src="../static/img/cast/cast2.html" alt="about" />
@@ -484,8 +472,7 @@
                                 </div> -->
                             </div>
                             <div class="slide-trailor">
-                                <a class="theme-btn theme-btn2" href="https://www.youtube.com/watch?v=8g18jFHCLXk"><i
-                                        class="icofont icofont-play"></i> Watch Trailer</a>
+                                <a class="theme-btn theme-btn2" href="https://www.youtube.com/watch?v=8g18jFHCLXk"><i class="icofont icofont-play"></i> Watch Trailer</a>
                             </div>
                         </div>
                     </div>
@@ -509,9 +496,7 @@
                                 </div>
                                 <h4>117k voters</h4>
                             </div>
-                            <p>James Bond has left active service. His peace is short-lived when Felix Leiter, an old
-                                friend from the CIA, turns up asking for help, leading Bond onto the trail of a
-                                mysterious villain armed with dangerous new technology.</p>
+                            <p>James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.</p>
                             <h3>Genre:</h3>
                             <div class="slide-cast" style="margin-left: 10px;">
                                 <ul>
@@ -520,7 +505,7 @@
                                     <li>Adventure</li>
                                 </ul>
                                 <!-- <div class="single-slide-cast">
-                                    <img src="static/img/cast/TH.jpg" alt="about" />
+                                    <img src="../static/img/cast/TH.jpg" alt="about" />
                                 </div>
                                 <div class="single-slide-cast">
                                     <img src="../static/img/cast/cast2.html" alt="about" />
@@ -546,8 +531,7 @@
                             </div>
                             <div class="slide-trailor">
 
-                                <a class="theme-btn theme-btn2" href="https://www.youtube.com/watch?v=N_gD9-Oa0fg"><i
-                                        class="icofont icofont-play"></i> Watch Trailer</a>
+                                <a class="theme-btn theme-btn2" href="https://www.youtube.com/watch?v=N_gD9-Oa0fg"><i class="icofont icofont-play"></i> Watch Trailer</a>
                             </div>
                         </div>
                     </div>
@@ -574,9 +558,7 @@
                                     </div>
                                     <h4>180k voters</h4>
                                 </div>
-                                <p>She is a devil princess from the demon world. She grew up sheltered by her parents
-                                    and doesn't really know how to be evil or any of the common actions, She is unable
-                                    to cry due to Keita's accidental first wish, despite
+                                <p>She is a devil princess from the demon world. She grew up sheltered by her parents and doesn't really know how to be evil or any of the common actions, She is unable to cry due to Keita's accidental first wish, despite
                                     needed for him to wish...</p>
                                 <h3>Cast:</h3>
                                 <div class="slide-cast">
@@ -607,8 +589,7 @@
                                 </div>
                                 <div class="slide-trailor">
                                     <h3>Watch Trailer</h3>
-                                    <a class="theme-btn theme-btn2" href="#"><i class="icofont icofont-play"></i>
-                                        Tickets</a>
+                                    <a class="theme-btn theme-btn2" href="#"><i class="icofont icofont-play"></i> Tickets</a>
                                 </div>
                             </div>
                         </div>
@@ -634,9 +615,7 @@
                                     </div>
                                     <h4>180k voters</h4>
                                 </div>
-                                <p>She is a devil princess from the demon world. She grew up sheltered by her parents
-                                    and doesn't really know how to be evil or any of the common actions, She is unable
-                                    to cry due to Keita's accidental first wish, despite
+                                <p>She is a devil princess from the demon world. She grew up sheltered by her parents and doesn't really know how to be evil or any of the common actions, She is unable to cry due to Keita's accidental first wish, despite
                                     needed for him to wish...</p>
                                 <h3>Cast:</h3>
                                 <div class="slide-cast">
@@ -667,8 +646,7 @@
                                 </div>
                                 <div class="slide-trailor">
                                     <h3>Watch Trailer</h3>
-                                    <a class="theme-btn theme-btn2" href="#"><i class="icofont icofont-play"></i>
-                                        Tickets</a>
+                                    <a class="theme-btn theme-btn2" href="#"><i class="icofont icofont-play"></i> Tickets</a>
                                 </div>
                             </div>
                         </div>
@@ -684,18 +662,18 @@
             <div class="row flexbox-center">
                 <div class="col-lg-6 text-center text-lg-left">
                     <div class="section-title">
-                        <h1><i class="icofont icofont-movie"></i> Search Result</h1>
+                        <h1><i class="icofont icofont-movie"></i> Spotlight This Month</h1>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-right">
-                    <!-- <div class="portfolio-menu">
+                    <div class="portfolio-menu">
                         <ul>
                             <li data-filter=".lastest" class="active">Latest</li>
                             <li data-filter=".soon">Comming Soon</li>
                             <li data-filter=".top">Top Rated</li>
                             <li data-filter=".released">Recently Released</li>
                         </ul>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <hr />
@@ -703,14 +681,14 @@
                 <div class="col-lg-9">
                     <div class="row portfolio-item">
 
-                        {% for i in query.results %}
+                        {% for i in lastest.items %}
                         <div class="col-md-4 col-sm-6 lastest">
 
                             <div class="single-portfolio">
                                 <div class="single-portfolio-img">
-
-                                    <a href="{% url 'moviedetails' i.id %}">
-                                        <img src="{{i.image}}" alt="portfolio" />
+                                    <img src="{{i.image}}" alt="portfolio" />
+                                    <a href="" class="popup-youtube">
+                                        <i class="icofont icofont-ui-play"></i>
                                     </a>
                                 </div>
                                 <div class="portfolio-content">
@@ -729,8 +707,81 @@
                             </div>
 
                         </div>
-                        {% endfor %}
+                        {% endfor %} {% for i in soon.items %}
+                        <div class="col-md-4 col-sm-6 soon">
 
+                            <div class="single-portfolio">
+                                <div class="single-portfolio-img">
+                                    <img src="{{i.image}}" alt="portfolio" />
+                                    <a href="" class="popup-youtube">
+                                        <i class="icofont icofont-ui-play"></i>
+                                    </a>
+                                </div>
+                                <div class="portfolio-content">
+                                    <h2>{{i.fullTitle}}</h2>
+                                    <div class="review">
+                                        <div class="author-review">
+                                            <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i>
+                                            <!-- <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i> -->
+                                        </div>
+                                        <h4>36k voters</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        {% endfor %} {% for i in top.items %}
+                        <div class="col-md-4 col-sm-6 top">
+                            <div class="single-portfolio">
+                                <div class="single-portfolio-img">
+                                    <img src="{{i.image}}" alt="portfolio" />
+                                    <a href="" class="popup-youtube">
+                                        <i class="icofont icofont-ui-play"></i>
+                                    </a>
+                                </div>
+                                <div class="portfolio-content">
+                                    <h2>{{i.fullTitle}}</h2>
+                                    <div class="review">
+                                        <div class="author-review">
+                                            <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i>
+                                            <!-- <i class="icofont icofont-star"></i> -->
+                                        </div>
+                                        <h4>110k voters</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %} {% for i in release.items %}
+                        <div class="col-md-4 col-sm-6 released">
+                            <div class="single-portfolio">
+                                <div class="single-portfolio-img">
+                                    <img src="{{i.image}}" alt="portfolio" />
+                                    <a href="" class="popup-youtube">
+                                        <i class="icofont icofont-ui-play"></i>
+                                    </a>
+                                </div>
+                                <div class="portfolio-content">
+                                    <h2>{{i.fullTitle}}</h2>
+                                    <div class="review">
+                                        <div class="author-review">
+                                            <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i>
+                                            <i class="icofont icofont-star"></i>
+                                        </div>
+                                        <h4>180k voters</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
 
                     </div>
                 </div>
@@ -760,8 +811,7 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="video-area">
-                        <img src="https://images.wallpapersden.com/image/download/venom-2-let-there-be-carnage-new-poster_bG1pbmWUmZqaraWkpJRnZWVlrWZmZ2o.jpg"
-                            alt="video" />
+                        <img src="https://images.wallpapersden.com/image/download/venom-2-let-there-be-carnage-new-poster_bG1pbmWUmZqaraWkpJRnZWVlrWZmZ2o.jpg" alt="video" />
                         <a href="https://www.youtube.com/watch?v=-FmWuCgJmxo" class="popup-youtube">
                             <i class="icofont icofont-ui-play"></i>
                         </a>
@@ -827,8 +877,7 @@
                     </div>
                     <div class="news-content">
                         <h2>Venom: Let There Be Carnage</h2>
-                        <p>Eddie Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who
-                            becomes the host of the symbiote Carnage and escapes prison after a failed execution.</p>
+                        <p>Eddie Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.</p>
                     </div>
 
                 </div>
@@ -840,10 +889,7 @@
                     </div>
                     <div class="news-content">
                         <h2>Dune</h2>
-                        <p>Feature adaptation of Frank Herbert's science fiction novel, about the son of a noble family
-                            entrusted with the protection of the most valuable asset and most vital element in the
-                            galaxy.
-                        </p>
+                        <p>Feature adaptation of Frank Herbert's science fiction novel, about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.</p>
                     </div>
 
                 </div>
@@ -855,10 +901,7 @@
                     </div>
                     <div class="news-content">
                         <h2>No Time to Die</h2>
-                        <p>James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend
-                            from the CIA, leading Bond onto the trail of a mysterious villain armed with dangerous new
-                            technology.
-                        </p>
+                        <p>James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.</p>
                     </div>
 
                 </div>
@@ -873,8 +916,7 @@
                         </div>
                         <div class="news-content">
                             <h2>The Witch Queen</h2>
-                            <p>Witch Queen is a tall woman with a slim build. She has pink hair, which is pulled up
-                                under her hat, and teal eyes.</p>
+                            <p>Witch Queen is a tall woman with a slim build. She has pink hair, which is pulled up under her hat, and teal eyes.</p>
                         </div>
 
                     </div>
@@ -888,8 +930,7 @@
                         </div>
                         <div class="news-content">
                             <h2>The Witch Queen</h2>
-                            <p>Witch Queen is a tall woman with a slim build. She has pink hair, which is pulled up
-                                under her hat, and teal eyes.</p>
+                            <p>Witch Queen is a tall woman with a slim build. She has pink hair, which is pulled up under her hat, and teal eyes.</p>
                         </div>
 
                     </div>
@@ -954,8 +995,8 @@
                     <div class="col-lg-6 text-center text-lg-right">
                         <div class="copyright-content">
                             <a href="#" class="scrollToTop">
-                                Back to top<i class="icofont icofont-arrow-up"></i>
-                            </a>
+									Back to top<i class="icofont icofont-arrow-up"></i>
+								</a>
                         </div>
                     </div>
                 </div>
